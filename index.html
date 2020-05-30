@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Óptica del Rey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='icon' type='image/png' href='favicon.png'>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+     
+     object {
+            /* border: 1px solid black; */
+            border:none;
+            width: 100%;
+            height: 107vh;
+            margin-top: -50px!important;
+        }
+        body{
+            margin: 0px!important;
+        }
+        .output {
+            background: #eee;
+        }
+        #contenedor{
+            overflow:hidden;
+            height: 100%;
+        }
+
+        /* Responsive */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 300px)
+and (max-device-width : 499px) {
+    object {
+            /* border: 1px solid black; */
+            border:none;
+            width: 100%;
+            height: 105%;
+            margin-top: -55px!important;
+            
+            --zoom: 1.18;
+            zoom: var(--zoom);
+            -moz-transform: scale(var(--zoom));
+            -o-transform: scale(var(--zoom));
+            -webkit-transform: scale(var(--zoom)); 
+        }
+
+      html{
+          /* background-color: black; */
+          margin: 0px!important;
+          padding: 0px!important;
+          height: 100%;
+      }  
+
+      body{
+          /* background-color: aquamarine; */
+          margin: 0px!important;
+          padding: 0px!important;
+          height: 100%;
+      }
+      #contenedor{
+            overflow:hidden;
+            height: 100%;
+            width: 100%;
+            /* background-color: blueviolet; */
+            margin: 0px!important;
+            padding: 0px!important;
+        }
+}
+ 
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* STYLES GO HERE */
+}
+ 
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+}
+ 
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 500px)
+and (max-device-width : 1024px) {
+
+}
+ 
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+}
+ 
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+}
+ 
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* STYLES GO HERE */
+}
+ 
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+}
+ 
+/* iPhone 5 (portrait &amp; landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+}
+ 
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+}
+ 
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+}
+
+#ultimo + div{
+    display: none!important;
+    width: 0px!important;
+}
+
+
+#loadingMessage {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background-color: transparent;
+}
+
+#spinner_1{
+    width: 10rem; 
+    height: 10rem;
+    margin-top: calc(25% - 5rem);
+}
+
+#cont_spiner{
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    margin-top: auto;
+    background-color: rgba(0, 0, 0, 0.562);
+}
+
+#SITE_CONTAINER{
+    background-color: black!important;
+}
+
+  </style>
+</head>
+<body>
+    <div id="contenedor">
+        <object onload="frameLoaded();" id="contenido" type="text/html" data="https://noek07.wixsite.com/website"> </object>
+       <!-- <div id="loadingMessage">
+            <div id="cont_spiner">
+                <div id="spinner_1"  class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <br>
+                <br>
+                <br>
+                <h5 style="color:white" class="">Preparando su experiencia...</h5>
+            </div>
+        </div> -->
+    </div> 
+    <div id="ultimo"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+  function frameLoaded(){
+      $('#loadingMessage').hide();
+  }
+</script>
+
+
